@@ -39,12 +39,12 @@ All of the three methods uses <u>TCP/IP</u>
 
 <hr>
 
+- Make sure SSH config for Raspberry IP OS in <u>Raspberry Imager</u> is enabled
 - <u>RP connected to a Wifi:</u>
   - Simply ping the IP address of RP
   - Access RP directory:
     - In terminal type: `ssh {username}@ip_address`
       - `ssh jay@xxx.xxx.x.xxx` 
-- Enable SSH config for Raspberry IP OS in <u>Raspberry Imager</u>
 
 
 
