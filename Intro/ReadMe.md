@@ -1,6 +1,6 @@
 # Raspberry Pi Setup Remote Access
 
-How to access Raspberry Pi (RP) files since I'm too broke to buy a monitor using SSH.  
+How to access Raspberry Pi (RP) files using SSH (secure shell) since I'm too broke to buy a monitor.  
 
 ## Raspberry Pi Networking
 
