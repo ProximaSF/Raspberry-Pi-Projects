@@ -38,7 +38,7 @@ All of the three methods uses <u>TCP/IP</u>
     - Might be required to prevent ssh closing
   - Try ping: `ping {RP_hostname.local}`
   - Access RP directory:
-    - `ssh  username@RP_hostname.local` or `username@rp_ip_address`
+    - `ssh  username@RP_hostname.local` or `ssh username@rp_ip_address`
 
 <hr>
 
@@ -51,15 +51,21 @@ All of the three methods uses <u>TCP/IP</u>
 
 ## Notes:
 
-1. `Sudo`: Mean **<u>Superuser do</u>**
+1. Be sure `ssh` is installed in `optional features` in windows settings
+
+   - So the command `ssh` client works in **PowerShell** 
+     - Mind as wel install ssh server also so RP can also connect to windows using ssh.
+   - Should be fine in Git Bash since it comes with it (ssh client)
+
+2. `Sudo`: Mean **<u>Superuser do</u>**
 
    -  Let the user run command with security privilege (like a admin)
 
-2. `nano`: Is a text editor for the command line.
+3. `nano`: Is a text editor for the command line.
 
    - Often used to config files
 
-3. `sudo nano /etc/ssh/sshd_config` to edit the ssh config file
+4. `sudo nano /etc/ssh/sshd_config` to edit the ssh config file
 
    - Add: 
 

@@ -10,7 +10,7 @@
 - `sudo systemctl status NetworkManager` - check which network management service is being used
 - `nmcli` - used for network connections and devices via NetworkManager
 - `nmcli device status` - show available interfaces and their status
-  - Similar to `ifconfig` but does not show address, just their status as clearly. 
+  - Similar to `ifconfig` but does not show address, just their status as clearly shown. 
 
 
 
