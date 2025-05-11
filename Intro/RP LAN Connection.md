@@ -36,6 +36,7 @@ All of the three methods uses <u>TCP/IP</u>
   - Select `Allow other network users to connect...`
   - Select the ethernet in the dropdown menu and press `okay`
     - Might be required to prevent ssh closing
+    - This step might not be required... ping stops working when network sharing is on
   - Try ping: `ping {RP_hostname.local}`
   - Access RP directory:
     - `ssh  username@RP_hostname.local` or `ssh username@rp_ip_address`
