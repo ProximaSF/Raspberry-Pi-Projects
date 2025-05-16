@@ -2,3 +2,5 @@ node_modules/
 notes/
 .env
 middleware/
+package-lock.json
+package.json
