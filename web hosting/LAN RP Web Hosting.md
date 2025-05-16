@@ -68,4 +68,3 @@ Below approach process is the same for both RP and laptop.
 ## Notes:
 
 
-
