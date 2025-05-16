@@ -1,0 +1,27 @@
+<!-- signup Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="UserPage" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    
+    <!-- rel stand for relationship. stylesheet linkes to a CSS file. href = hypertext reference. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome <%= username %></h1>
+        <div class="buttons">
+            <div class="option" id="homepage">Homepage</div>
+            <div class="option" id="logout">Logout</div>
+        </div>
+    </div>
+
+    <script type="module" src="js_scripts/userPage.js"></script>
+</body>
+</html>
+
