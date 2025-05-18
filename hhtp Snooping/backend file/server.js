@@ -116,7 +116,7 @@ app.get("/logout", (req, res) => {
     res.clearCookie("SimpleValidationApp", {
         path: "/",
         httpOnly: true,
-        secure: true
+        secure: false // cookie will be deleted for http sites
     });
 
     res.render("homepage", {

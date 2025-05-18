@@ -84,7 +84,6 @@ try {
             res.cookie("SimpleValidationApp", TokenValue, {
                 httpOnly: true, // if true, prevent cookie from deleting from clietn side to prevent XSS attacks
                 secure: true,
-                sameSite: "strict",
                 maxAge: 1000 * 60 * 60 * 24
             })
     
@@ -147,10 +146,11 @@ try {
                 // Set the cookie
                 res.cookie("SimpleValidationApp", TokenValue, {
                     httpOnly: true,
-                    secure: true,
+                    secure: false, //Only set cookie on http sites if true
                     sameSite: "strict",
                     maxAge: 1000 * 60 * 60 * 24
                 })
+                console.log(res.cookie)
                 console.log('cookie set')
                 res.render("userPage", {
                     // Display username in userPage 
