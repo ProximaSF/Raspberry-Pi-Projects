@@ -21,8 +21,11 @@
   - `sudo apt-get install packet_name` to install a package
   - `sudo apt-get -h` to a list of command for apt-get
 
+- `sudo raspi-config` to config RP stuff like VNC to allow RealVNC Viewer 
 
+## Note:
 
+Raspberry Pi is based on <u>Debian distribution</u> Linux - hence `apt` when installing packages
 
 
 
