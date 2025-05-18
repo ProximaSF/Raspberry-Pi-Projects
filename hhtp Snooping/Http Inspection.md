@@ -29,7 +29,8 @@ Hosting the backend validation site through RP.
 
 ## Scapy Script
 
-
-
-
+1. Contain one function that will run in a infinite loop to check for TCP packets only and with the correct port value (contain http and 4000). 
+2. If found one, save the packet to a list. After 20 capture, iterate over the list to check if have Raw layer (may contain binary, text/ASCII, application data, etc). 
+3. If so, check if it have the text `/login` or `/signin` (html file path). 
+4. Finally it check if that the word `password`. If so, grab the validation values and write to the text file. 
 
