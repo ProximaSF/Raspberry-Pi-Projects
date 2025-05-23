@@ -1,6 +1,8 @@
 # Sniffing
 
-Checking for raw validation input value of a http website using Wireshark and a custom Python script. 
+Checking for validation input value of a http website using Wireshark and a custom Python script. 
+
+Also using ettercap on RP to perform ARP (Address Resolution Protocol)poisoning - a man-in-the-middle-attack. 
 
 Hosting the backend validation site through RP. 
 
@@ -20,12 +22,10 @@ Hosting the backend validation site through RP.
 
 ## Wireshark
 
-1. Singup or login to an account
+1. Singup or login on site 
 2. In Wireshark, filter `hhtp` and look for the packet that have `POST` request
 3. Right click the packet and select *follow* and than *http* 
 4. Since the site is HTTP, all the text is raw, not encrypted when the packet sent to 10.0.0.2 after valid inputs
-
-
 
 ## Scapy Script
 
