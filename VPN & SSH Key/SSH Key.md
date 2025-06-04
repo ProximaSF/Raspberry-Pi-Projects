@@ -30,13 +30,22 @@ Generate a SSH key to better protection/authentication when signing into Raspber
      1. `PermitRootLogin ` → `false`
      2. `PubkeyAuthentication ` → `yes` 
      3. `PasswordAuthantication` → `no` Prevent login using root password without the key
+     4. Default port is `22 `but can change to something else to reduce the chance of attacker finding the RP (e.i: Port 19294).
 
 7. Reset RP system for ssh
    - `sudo systemctl restart ssh`
 
-8. Try login (local) `ssh -i {ssh_key_file} Username@IP_Address_of_RP`
+8. Try login (local) 
 
+   ```bash
+   ssh -i {ssh_key_file} Username@IP_Address_of_RP`
+   or
+   ssh -i {ssh_key_file} Username@host_name
+   ```
 
+   - If port was changed in config, add `-p {value}` before `-i`
+
+     `ssh -p {portNum} -i {ssh_key_file} Username@IP_Address_of_RP`
 
 ## Connecting to RP on Different Network
 
@@ -55,11 +64,17 @@ Generate a SSH key to better protection/authentication when signing into Raspber
    - Set Forward Port to 22
    - Set interval/schedule to always
    - Save/add rule
+   - NOTE: If want to use a different port (same as the Pi `sshd_config`) set both original and forward port the same. 
 
 4. Check if you can connect to the RP
 
    - Try login from outside of network: `ssh -i {ssh_key_file} Username@IP_Address_of_RP`
+     
+     - If port was changed in config, add `-p {value}` before `-i`
+     
+       `ssh -p {value} -i {ssh_key_file} Username@IP_Address_of_RP`
+     
+       - Make sure the port value is also the same as the ports when setting up the port forwarding rule for the router. 
+     
      - Might need to enter password for the key if was set.
-   
-   - Can check if can connect to router: `telent {public_ip_address} 22`
 
